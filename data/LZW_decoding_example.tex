@@ -1,0 +1,16 @@
+\documentclass{article}
+\begin{document}
+\thispagestyle{empty}
+\begin{tabular}{rrrrrl}
+  Input & $c$    &    $w$ &     $k$ &  Output & Comment \\
+  \hline
+  97 &         97 &         &         & {\tt a} & Initialization\\
+  98 &         98 &      97 & {\tt b} & {\tt b} & $c<257$, $D[257]\leftarrow\mathtt{ab}$\\
+  257 &        257 &      98 & {\tt a} &{\tt ab} & $c<258$, $D[258]\leftarrow\mathtt{ba}$\\
+  99 &         99 &     257 & {\tt c} & {\tt c} & $c<259$, $D[259]\leftarrow\mathtt{abc}$\\
+  258 &        258 &      99 & {\tt b} &{\tt ba} & $c<260$, $D[260]\leftarrow\mathtt{cb}$\\
+  261 &        261 &     258 & {\tt b} &{\tt bab}& $c=261$, $D[261]\leftarrow\mathtt{bab}$\\
+  97 &         97 &     261 & {\tt a} & {\tt a} & $c<262$, $D[262]\leftarrow\mathtt{baba}$\\
+  263 &        263 &      97 & {\tt a} &{\tt aa} & $c=263$, $D[263]\leftarrow\mathtt{aa}$
+\end{tabular}
+\end{document}

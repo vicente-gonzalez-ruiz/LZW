@@ -1,0 +1,43 @@
+\documentclass{article}
+\begin{document}
+\thispagestyle{empty}
+  \begin{tabular}{rrcrl}
+    Input & $w$ & $k$ & Output & Comment \\
+    \hline
+    {\tt ab} & 97 & {\tt b} & 97 & $D[257]\leftarrow\mathtt{ab}$\\
+    {\tt  a} & 98 & {\tt a} & 98 & $D[258]\leftarrow\mathtt{ba}$\\
+    {\tt  b} & 97 & {\tt b} &    & $\mathtt{w}=257$\\
+    {\tt  c} &257 & {\tt c} &257 & $D[259]\leftarrow\mathtt{abc}$\\
+    {\tt  b} & 99 & {\tt b} & 99 & $D[260]\leftarrow\mathtt{cb}$\\
+    {\tt  a} & 98 & {\tt a} &    & $\mathtt{w}=258$\\
+    {\tt  b} &258 & {\tt b} &258 & $D[261]\leftarrow\mathtt{bab}$\\
+    {\tt  a} & 98 & {\tt a} &    & $\mathtt{w}=258$\\
+    {\tt  b} &258 & {\tt b} &    & $\mathtt{w}=261$\\
+    {\tt  a} &261 & {\tt a} &261 & $D[262]\leftarrow\mathtt{baba}$\\
+    {\tt  a} & 97 & {\tt a} & 97 & $D[263]\leftarrow\mathtt{aa}$\\
+    {\tt  a} & 97 & {\tt a} &    & $\mathtt{w}=263$\\
+    {\tt  a} &263 & {\tt a} &263 & $D[264]\leftarrow\mathtt{aaa}$\\
+    {\tt  a} & 97 & {\tt a} &    & $\mathtt{w}=263$
+  \end{tabular}
+
+  \begin{tabular}{rrrr}
+    Address &     String &     $w$ &        $k$ \\
+    \hline
+    0 &            &       0 &  \sf{NULL} \\
+    $\vdots$ &            &$\vdots$ &   $\vdots$ \\
+    97 &            &       0 &    {\tt a} \\
+    98 &            &       0 &    {\tt b} \\
+    99 &            &       0 &    {\tt c} \\
+    $\vdots$&            &$\vdots$ &   $\vdots$ \\
+    256 &\multicolumn{3}{c}{reserved for the \sf{ESC} code}\\
+    257 &   {\tt ab} &      97 &    {\tt b} \\
+    258 &   {\tt ba} &      98 &    {\tt a} \\
+    259 &  {\tt abc} &     257 &    {\tt c} \\
+    260 &   {\tt cb} &      99 &    {\tt b} \\
+    261 &  {\tt bab} &     258 &    {\tt b} \\
+    262 & {\tt baba} &     261 &    {\tt a} \\
+    263 &   {\tt aa} &      97 &    {\tt a} \\
+    264 &  {\tt aaa} &     263 &    {\tt a}
+  \end{tabular}
+\end{document}
+
