@@ -26,23 +26,7 @@ class="ecrm-1200">Vicente Gonz</span><span
 class="ecrm-1200">á</span><span 
 class="ecrm-1200">lez Ruiz</span></div><br />
 <div class="date" ><span 
-class="ecrm-1200">December 30, 2018</span></div>
-   </div>
-   <div class="tableofcontents">
-   <span class="sectionToc" >1 <a 
-href="#x1-10001" id="QQ2-1-1">Basics</a></span>
-<br />   <span class="sectionToc" >2 <a 
-href="#x1-20002" id="QQ2-1-2">Encoder</a></span>
-<br />   <span class="sectionToc" >3 <a 
-href="#x1-30003" id="QQ2-1-3">Example</a></span>
-<br />   <span class="sectionToc" >4 <a 
-href="#x1-40004" id="QQ2-1-4">Decoder</a></span>
-<br />   <span class="sectionToc" >5 <a 
-href="#x1-50005" id="QQ2-1-5">Example</a></span>
-<br />   <span class="sectionToc" >6 <a 
-href="#x1-60006" id="QQ2-1-6">Lab: LZW</a></span>
-<br />   <span class="likesectionToc" ><a 
-href="#x1-70006" id="QQ2-1-7">References</a></span>
+class="ecrm-1200">May 13, 2019</span></div>
    </div>
    <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
  id="x1-10001"></a>Basics</h3>
@@ -50,7 +34,7 @@ href="#x1-70006" id="QQ2-1-7">References</a></span>
      <li class="itemize">In 1984, Terry A. Welch proposed the <a 
 href="https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch" >LZW algorithm</a> <span class="cite">[<a 
 href="#Xwelch1984technique">1</a>]</span>, an improved
-     version of the LZ78 algorithm that does not writes raw symbols (<!--l. 20--><math 
+     version of the LZ78 algorithm that does not writes raw symbols (<!--l. 19--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -63,7 +47,7 @@ href="https://en.wikipedia.org/wiki/GIF" >GIF  (Graphics
 href="https://en.wikipedia.org/wiki/Compress" ><span 
 class="ectt-1000">compress</span></a>.
      </li>
-     <li class="itemize">Initially, the dictionary is ﬁlled with the <!--l. 28--><math 
+     <li class="itemize">Initially, the dictionary is ﬁlled with the <!--l. 27--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><msup><mrow 
@@ -73,34 +57,34 @@ display="inline" ><mrow
 ></mrow></math>
      possible symbols (<span 
 class="ecti-1000">roots</span>), that are stored in the ﬁrst entries (for 1-byte
-     symbols: <!--l. 30--><math 
+     symbols: <!--l. 29--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mn>0</mn><mo 
 class="MathClass-rel">⋯</mo><mn>2</mn><mn>5</mn><mn>5</mn></mrow></math>).</li></ul>
-                                                                  
-
-                                                                  
-<!--l. 33--><p class="noindent" >
+<!--l. 32--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
  id="x1-20002"></a>Encoder</h3>
-<!--l. 35--><p class="noindent" >
+<!--l. 34--><p class="noindent" >
      </p><ol  class="enumerate1" >
      <li 
-  class="enumerate" id="x1-2002x1"><!--l. 38--><math 
+  class="enumerate" id="x1-2002x1"><!--l. 37--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >w</mi> <mo 
 class="MathClass-rel">←</mo></mrow></math>
      ﬁrst input symbol.
+                                                                  
+
+                                                                  
      </li>
      <li 
   class="enumerate" id="x1-2004x2">While the input is not exhausted:
          <ol  class="enumerate2" >
          <li 
-  class="enumerate" id="x1-2006x1"><!--l. 44--><math 
+  class="enumerate" id="x1-2006x1"><!--l. 43--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -109,7 +93,7 @@ class="MathClass-rel">←</mo></mrow></math>
          next input symbol.
          </li>
          <li 
-  class="enumerate" id="x1-2008x2">If <!--l. 46--><math 
+  class="enumerate" id="x1-2008x2">If <!--l. 45--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -118,13 +102,13 @@ display="inline" ><mrow
          is found in the dictionary, then:
              <ol  class="enumerate3" >
              <li 
-  class="enumerate" id="x1-2010x1"><!--l. 50--><math 
+  class="enumerate" id="x1-2010x1"><!--l. 49--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >w</mi> <mo 
 class="MathClass-rel">←</mo></mrow></math>
-             address of <!--l. 50--><math 
+             address of <!--l. 49--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -136,7 +120,7 @@ display="inline" ><mrow
   class="enumerate" id="x1-2012x3">Else:
              <ol  class="enumerate3" >
              <li 
-  class="enumerate" id="x1-2014x1">Output <!--l. 57--><math 
+  class="enumerate" id="x1-2014x1">Output <!--l. 56--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mo 
@@ -144,7 +128,7 @@ class="MathClass-rel">←</mo> <mi
 >w</mi></mrow></math>.
              </li>
              <li 
-  class="enumerate" id="x1-2016x2">Insert <!--l. 59--><math 
+  class="enumerate" id="x1-2016x2">Insert <!--l. 58--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -153,7 +137,7 @@ display="inline" ><mrow
              in the dictionary.
              </li>
              <li 
-  class="enumerate" id="x1-2018x3"><!--l. 61--><math 
+  class="enumerate" id="x1-2018x3"><!--l. 60--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -162,22 +146,19 @@ class="MathClass-rel">←</mo> <mi
 >k</mi></mrow></math>.</li></ol>
          </li></ol>
      </li></ol>
-<!--l. 66--><p class="noindent" >
+<!--l. 65--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
  id="x1-30003"></a>Example</h3>
-<!--l. 67--><p class="noindent" > <div style="text-align:center;"> <img width=400 src="graphics/LZW_encoding_example.png" /> </div> 
-</p><!--l. 69--><p class="noindent" >
+<!--l. 66--><p class="noindent" > <div style="text-align:center;"> <img width=400 src="graphics/LZW_encoding_example.png" /> </div> 
+</p><!--l. 68--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
  id="x1-40004"></a>Decoder</h3>
-<!--l. 71--><p class="noindent" >
-                                                                  
-
-                                                                  
+<!--l. 70--><p class="noindent" >
      </p><ol  class="enumerate1" >
      <li 
-  class="enumerate" id="x1-4002x1"><!--l. 74--><math 
+  class="enumerate" id="x1-4002x1"><!--l. 73--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -186,14 +167,14 @@ class="MathClass-rel">←</mo></mrow></math>
      ﬁrst input code-word.
      </li>
      <li 
-  class="enumerate" id="x1-4004x2">Output <!--l. 76--><math 
+  class="enumerate" id="x1-4004x2">Output <!--l. 75--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >c</mi></mrow></math>.
      </li>
      <li 
-  class="enumerate" id="x1-4006x3"><!--l. 78--><math 
+  class="enumerate" id="x1-4006x3"><!--l. 77--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><msup><mrow 
@@ -204,12 +185,15 @@ display="inline" ><mrow
 ><mo 
 class="MathClass-rel">←</mo> <mi 
 >c</mi></mrow></math>.
+                                                                  
+
+                                                                  
      </li>
      <li 
   class="enumerate" id="x1-4008x4">While the input is not exhausted:
          <ol  class="enumerate2" >
          <li 
-  class="enumerate" id="x1-4010x1"><!--l. 84--><math 
+  class="enumerate" id="x1-4010x1"><!--l. 83--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -218,7 +202,7 @@ class="MathClass-rel">←</mo></mrow></math>
          next input code-word.
          </li>
          <li 
-  class="enumerate" id="x1-4012x2"><!--l. 86--><math 
+  class="enumerate" id="x1-4012x2"><!--l. 85--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -231,7 +215,7 @@ class="MathClass-rel">←</mo> <msup><mrow
 ></mrow></math>.
          </li>
          <li 
-  class="enumerate" id="x1-4014x3">If <!--l. 88--><math 
+  class="enumerate" id="x1-4014x3">If <!--l. 87--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -239,7 +223,7 @@ display="inline" ><mrow
          is found in the dictionary, then:
              <ol  class="enumerate3" >
              <li 
-  class="enumerate" id="x1-4016x1">Output string<!--l. 92--><math 
+  class="enumerate" id="x1-4016x1">Output string<!--l. 91--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -251,7 +235,7 @@ class="MathClass-close">)</mo></mrow></mrow></math>.</li></ol>
   class="enumerate" id="x1-4018x4">Else:
              <ol  class="enumerate3" >
              <li 
-  class="enumerate" id="x1-4020x1">Output string<!--l. 99--><math 
+  class="enumerate" id="x1-4020x1">Output string<!--l. 98--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -260,14 +244,14 @@ class="MathClass-open">(</mo><mrow><mi
 class="MathClass-close">)</mo></mrow></mrow></math>.
              </li>
              <li 
-  class="enumerate" id="x1-4022x2">Output <!--l. 101--><math 
+  class="enumerate" id="x1-4022x2">Output <!--l. 100--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >k</mi></mrow></math>.</li></ol>
          </li>
          <li 
-  class="enumerate" id="x1-4024x5"><!--l. 104--><math 
+  class="enumerate" id="x1-4024x5"><!--l. 103--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -276,7 +260,7 @@ class="MathClass-rel">←</mo></mrow></math>
          ﬁrst symbol of the last output.
          </li>
          <li 
-  class="enumerate" id="x1-4026x6">Insert <!--l. 106--><math 
+  class="enumerate" id="x1-4026x6">Insert <!--l. 105--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -285,7 +269,7 @@ display="inline" ><mrow
          in the dictionary.
          </li>
          <li 
-  class="enumerate" id="x1-4028x7"><!--l. 108--><math 
+  class="enumerate" id="x1-4028x7"><!--l. 107--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><msup><mrow 
@@ -297,20 +281,20 @@ display="inline" ><mrow
 class="MathClass-rel">←</mo> <mi 
 >c</mi></mrow></math>.</li></ol>
      </li></ol>
-<!--l. 112--><p class="noindent" >
+<!--l. 111--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
  id="x1-50005"></a>Example</h3>
-<!--l. 113--><p class="noindent" > <div style="text-align:center;"> <img width=600 src="graphics/LZW_decoding_example.png" /> </div> 
-</p><!--l. 115--><p class="noindent" >
-                                                                  
-
-                                                                  
+<!--l. 112--><p class="noindent" > <div style="text-align:center;"> <img width=600 src="graphics/LZW_decoding_example.png" /> </div> 
+</p><!--l. 114--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
  id="x1-60006"></a>Lab: LZW</h3>
-<!--l. 116--><p class="noindent" ><a 
+<!--l. 115--><p class="noindent" ><a 
 href="https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/LZW/blob/master/LZW.ipynb" >IPython notebook</a>
+                                                                  
+
+                                                                  
 </p><!--l. 1--><p class="noindent" >
 </p>
    <h3 class="likesectionHead"><a 
